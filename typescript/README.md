@@ -1,79 +1,77 @@
-# LeetCode Learning Repository
+# 📘 TypeScript Solutions – LeetCode Practice
 
-Repository ini berisi solusi-solusi untuk masalah LeetCode yang saya kerjakan sebagai bagian dari proses belajar dan pengembangan keterampilan pemrograman.
+Folder ini berisi solusi problem LeetCode yang diselesaikan menggunakan TypeScript. Setiap soal diorganisasi dalam folder tersendiri yang terdiri dari:
+
+- `solution.ts` – implementasi utama
+- `optimized.ts` - implementasi solusi yang dioptimasi "*jika ada*""
+- `test.ts` – unit test menggunakan Jest
+- `README.md` – dokumentasi penjelasan strategi dan pendekatan
+
+---
+
+## 🛠 Environment
+
+Pastikan kamu menggunakan versi yang sesuai agar seluruh script dan testing berjalan lancar.
+
+- **Node.js**: `>=18.x`
+- **npm**: `>=9.x`
+- **TypeScript**: `^5.x`
+- **Jest**: `^29.x`
+- **ts-jest**: `^29.x`
+
+> Kamu bisa mengecek versi lokal dengan:
+
+```bash
+node -v
+npm -v
+npx tsc -v
+npx jest --version
+```
+
+## ⚙️ Setup
+Sebelum menjalankan solusi atau testing, pastikan kamu sudah melakukan install kebutuhan developlemnt `depedensi`:
+```bash
+npm install
+```
+
+## 🧪 Testing
+
+### Menjalankan semua Test
+Untuk menjalankan semua test disemua soal:
+```bash
+npm run test
+```
+
+### Menjalankan Test untuk soal tertentu
+Masih dalam pembuatan 
 
 ## Struktur Folder
-
-Repository ini mengikuti struktur standar berikut:
-*Catatan ext adalah ekstensi bahasa pemograman*
-```shell
-leetcode-learning/
-├── README.md (Dokumentasi utama ini)
-├── <Bahasa Pemograman>/ (Solusi dalam Bahasa pemograman tertentu)
-│ ├── XXXX-NamaSoal/ (Folder dengan nama format: nomor-soal-nama-soal)
-│ │ ├── solution.ext (Implementasi solusi utama)
-│ │ ├── optimized.ext (Implementasi solusi yang dioptimasi [jika ada])
-│ │ ├── test.ext (File testing untuk solusi)
-│ │ └── README.md (Penjelasan soal dan solusi)
+```
+typescript/
+├── 1-two-sum/
+│   ├── solution.ts
+│   ├── test.ts
+│   └── README.md
+├── 121-best-time-to-buy-and-sell-stock/
+│   ├── solution.ts
+│   ├── test.ts
+│   └── README.md
+├── babel.config.json       # settingan babel untuk keperluan jest
+├── tsconfig.json          # Settingan typescript untuk mengatur behavior
+├── package.json           # Mengatur informasi node.js dan beberapa settingan lain 
+└── README.md               # Dokumentasi teknikal (file ini)
 ```
 
+## 🧱 Konvensi Penulisan
+Folder soal: {nomor-soal}-{judul-kebab-case}
+Nama file:
+- `solution.ts`
+- `solution-naive.ts` -> solusi brute-force
+- `optimized.ts`
+- `test.ts`
+- `README.md` -> dokumentasi persoal
 
-## Standarisasi Penamaan
-
-1. **Folder Soal**: `[nomor-soal]-[nama-soal]` (contoh: `0001-two-sum`)
-2. **File Solusi**:
-   - `solution.[ext]` untuk solusi utama
-   - `optimized.[ext]` untuk solusi yang dioptimasi
-   - `test.[ext]` atau `solution_test.[ext]` untuk file testing
-
-## Standarisasi Commit Message
-
-Gunakan format berikut untuk commit message:
-```
-<type>(<language>): <leetcode-problem-id> - <deskripsi pendek>
-```
-
-Keterangan:
-- `feat`: untuk solusi baru
-- `fix`: untuk perbaikan solusi
-- `refactor`: untuk optimisasi/restrukturisasi kode
-- `test`: untuk penambahan/pengubahan test
-- `docs`: untuk perubahan dokumentasi
-
-Contoh:
-- `feat(ts): 1 - add initial solution for two sum`
-- `test(ts): 1 - add test cases for two sum solution`
-- `docs(ts): 1 - update explanation in README`
-- `refacator(ts): 1 - optimize solution with hash map`
-
-Setiap folder soal harus memiliki README.md dengan format berikut:
-
-```markdown
-
-# [No Soal]. [Judul Soal]
-
-**Difficulty:** easy / med / hard 
-**Topics:** `tag1`, `tag2`  
-**Link:** [LeetCode Problem](link)
-
-## 📝 Penjelasan Soal
-[1-2 kalimat jelasin soal pake bahasa sendiri]
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-
-## Pendekatan Solusi
-
-### Solusi (Brute Force/Naif)
-**Intuisi:**
-[Proses pemikiran awal Anda tentang cara menyelesaikan masalah]
-
-**Pendekatan:**
-- Penjelasan langkah demi langkah pendekatan Anda
-- Observasi atau wawasan penting
-
-
-## Inti Pembelajaran
-- [Poin penting 1]
-- [Poin penting 2]
-```
+## 🔧 Tools & Library
+- TypeScript
+- Jest untuk testing
+- ts-jest untuk integrasi TypeScript dan Jest
